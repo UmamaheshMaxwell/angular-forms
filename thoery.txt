@@ -36,3 +36,23 @@ Disadvantages
 1. Difficult add controls dynamically
 2. Unit testing is a challenge
 
+Reactive Forms
+----------------
+Reactive forms are the forms where we define the structure of the form 
+in the component class.
+
+We create reactive form model with Form Groups, Form Contols amd Form Arrays
+
+How to use Reactive Forms Module
+--------------------------------
+1. Import ReactiveFormsModule
+2. Create Fomr Model in component class using "Form Group"
+3. create the hTML from resembling the form Model
+4. Bind the HTML from to form model
+
+Form Group
+------------
+Form group takes 3 arguments, a collection of child form control,
+a validator and an asynchronous validator
+
+* Validators, synchronous and Asynchronous validators are optional

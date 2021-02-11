@@ -1,0 +1,58 @@
+<div class="container">
+    <h1>Tempalate Driven Forms</h1>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      <p>
+        <label>FirstName</label>
+        <input type="text" class="form-control" name="firstName" ngModel>
+      </p>
+      <p>
+        <label>LastName</label>
+        <input type="text" name="lastName" class="form-control" ngModel>
+      </p>
+      <p>
+        <label>Email</label>
+        <input type="text" name="email" class="form-control" ngModel>
+      </p>
+      <p>
+        <label>Gender</label>&nbsp;
+        <input type="radio" name="gender" value="male" ngModel> Male
+        <input type="radio" name="gender" value="female" ngModel> Female
+      </p>
+      <p>
+        <label>Married</label> &nbsp;
+        <input type="checkbox" name="isMarried" ngModel>
+      </p>
+      <p>
+        <label>Country</label>
+        <select name="country" class="form-control" ngModel>
+            <option selected="" value="">Please select</option>
+            <option [ngValue]="country.id" *ngFor="let country of countryList">{{country.name}}</option>
+        </select>
+      </p>
+      <div ngModelGroup="address">
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" name="city" ngModel class="form-control">
+        </div>
+        <div class="form-group">
+          <label>State</label>
+          <input type="text" name="state" ngModel class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Pincode</label>
+          <input type="text" name="pincode" ngModel class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Landmark</label>
+          <input type="text" name="landmark" ngModel class="form-control">
+        </div>
+      </div>
+  
+      <br><br>
+      <p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </p>
+    </form>
+  </div>
+  
+  
